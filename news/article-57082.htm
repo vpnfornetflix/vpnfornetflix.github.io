@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-57082.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue &#8211; 如何实现导入excel功能</title>
+        <meta name="description" content="实际情况中有时候需要我们一次性添加多个员工信息，这个时候就需要我们开发一个批量导入的功能：将事先以excel格式保存的文件批量导入进来。  思路1：前端主导（本文只对前端主导进行讲解） 上传excel" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-57082.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="vue &#8211; 如何实现导入excel功能" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/5e656f8f5b721c50b12e12708d6e3670.webp" />
+        <meta property="og:release_date" content="2025-02-15T05:23:14" />
+    <meta property="og:updated_time" content="2025-02-15T05:23:14" />
+        <meta property="og:description" content="实际情况中有时候需要我们一次性添加多个员工信息，这个时候就需要我们开发一个批量导入的功能：将事先以excel格式保存的文件批量导入进来。  思路1：前端主导（本文只对前端主导进行讲解） 上传excel" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue &#8211; 如何实现导入excel功能">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>vue &#8211; 如何实现导入excel功能</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>实际情况中有时候需要我们一次性添加多个员工信息，这个时候就需要我们开发一个批量导入的功能：将事先以excel格式保存的文件批量导入进来。</p> </h1> <p>思路1：前端主导（本文只对前端主导进行讲解）</p> <p>上传excel文件，把excel文件的内容读出来，还原成最基本的行列结构，按后端的接口要求回传过去。</p> <p><img fetchpriority="high" decoding="async" alt="" height="226" src="http://img.555519.xyz/uploads3/20220609/0ba495f341d27eeccfa6c97169060c5d.jpg"></p> <p>思路2：后端主导</p> <p><img decoding="async" alt="" height="209" src="http://img.555519.xyz/uploads3/20220609/46c5598e97c08bb5a739125b72074be4.jpg"></p> </h1> <h2>3.1 组件封装</h2> <h3>3.1.1 将vue-element-admin提供的组件复制到我们自己的项目下</h3> <p>复制以下代码即可</p> <pre><code class="language-javascript">&lt;template&gt;   &lt;div&gt;     &lt;input ref="excel-upload-input" class="excel-upload-input" type="file" accept=".xlsx, .xls" @change="handleClick"&gt;     &lt;div class="drop" @drop="handleDrop" @dragover="handleDragover" @dragenter="handleDragover"&gt;       拖入excel文件 or       &lt;el-button :loading="loading" style="margin-left:16px;" size="mini" type="primary" @click="handleUpload"&gt;         浏览       &lt;/el-button&gt;     &lt;/div&gt;   &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import XLSX from 'xlsx'  export default {   name: 'UploadExcel',   props: {     beforeUpload: Function, // eslint-disable-line     onSuccess: Function// eslint-disable-line   },   data() {     return {       loading: false,       excelData: {         header: null,         results: null       }     }   },   methods: {     generateData({ header, results }) {       this.excelData.header = header       this.excelData.results = results       this.onSuccess &amp;&amp; this.onSuccess(this.excelData)     },     handleDrop(e) {       e.stopPropagation()       e.preventDefault()       if (this.loading) return       const files = e.dataTransfer.files       if (files.length !== 1) {         this.$message.error('Only support uploading one file!')         return       }       const rawFile = files[0] // only use files[0]        if (!this.isExcel(rawFile)) {         this.$message.error('Only supports upload .xlsx, .xls, .csv suffix files')         return false       }       this.upload(rawFile)       e.stopPropagation()       e.preventDefault()     },     handleDragover(e) {       e.stopPropagation()       e.preventDefault()       e.dataTransfer.dropEffect = 'copy'     },     handleUpload() {       this.$refs['excel-upload-input'].click()     },     handleClick(e) {       const files = e.target.files       const rawFile = files[0] // only use files[0]       if (!rawFile) return       this.upload(rawFile)     },     upload(rawFile) {       this.$refs['excel-upload-input'].value = null // fix can't select the same excel        if (!this.beforeUpload) {         this.readerData(rawFile)         return       }       const before = this.beforeUpload(rawFile)       if (before) {         this.readerData(rawFile)       }     },     readerData(rawFile) {       this.loading = true       return new Promise((resolve, reject) =&gt; {         const reader = new FileReader()         reader.onload = e =&gt; {           const data = e.target.result           const workbook = XLSX.read(data, { type: 'array' })           const firstSheetName = workbook.SheetNames[0]           const worksheet = workbook.Sheets[firstSheetName]           const header = this.getHeaderRow(worksheet)           const results = XLSX.utils.sheet_to_json(worksheet)           this.generateData({ header, results })           this.loading = false           resolve()         }         reader.readAsArrayBuffer(rawFile)       })     },     getHeaderRow(sheet) {       const headers = []       const range = XLSX.utils.decode_range(sheet['!ref'])       let C       const R = range.s.r       /* start in the first row */       for (C = range.s.c; C &lt;= range.e.c; ++C) { /* walk every column in the range */         const cell = sheet[XLSX.utils.encode_cell({ c: C, r: R })]         /* find the cell in the first row */         let hdr = 'UNKNOWN ' + C // &lt;-- replace with your desired default         if (cell &amp;&amp; cell.t) hdr = XLSX.utils.format_cell(cell)         headers.push(hdr)       }       return headers     },     isExcel(file) {       return /\.(xlsx|xls|csv)$/.test(file.name)     }   } } &lt;/script&gt;  &lt;style scoped&gt; .excel-upload-input{   display: none;   z-index: -9999; } .drop{   border: 2px dashed #bbb;   width: 600px;   height: 160px;   line-height: 160px;   margin: 0 auto;   font-size: 24px;   border-radius: 5px;   text-align: center;   color: #bbb;   position: relative; } &lt;/style&gt;</code></pre> <h2>3.1.2&nbsp;安装插件</h2> <pre><code>npm install xlsx -S</code></pre> <h2>3.1.3&nbsp;引入UploadExcel组件并注册为全局</h2> <pre><code class="language-javascript">import PageTools from './PageTools' import UploadExcel from './UploadExcel'  export default {   // 插件的初始化, 插件给你提供的全局的功能, 都可以在这里配置   install(Vue) {     // 进行组件的全局注册     Vue.component('PageTools', PageTools) // 注册工具栏组件     Vue.component('UploadExcel', UploadExcel) // 注册导入excel组件   } }</code></pre> <h2>3.2 准备页面</h2> <p>3.2.1 建立路由</p> <pre><code class="language-javascript">&lt;template&gt;   &lt;upload-excel :on-success="handleSuccess" /&gt; &lt;/template&gt;  &lt;script&gt; export default {   name: 'Import',   methods: {     handleSuccess({ header, results }) {       console.log(header, results)     }   } } &lt;/script&gt;</code></pre> <h3>3.2.2 配置路由</h3> <pre><code class="language-javascript">{     path: '/import',     component: Layout,     hidden: true, // 不显示到左侧菜单     children: [{       path: '',        component: () =&gt; import('@/views/import')     }] }</code></pre> <h3>3.2.3 测试结果</h3> <p><img decoding="async" alt="" height="137" src="http://img.555519.xyz/uploads3/20220609/d866c0bfe0d5733bb352998241df8059.jpg"></p> <h2>3.3 数据处理</h2> <p><img loading="lazy" decoding="async" alt="" height="290" src="http://img.555519.xyz/uploads3/20220609/84385e874b1c2107a024d4cfaeee72d5.jpg"></p> <h3>3.3.1 目标</h3> <p>将excel解析好的数据经过处理后，转成可以传给接口调用的数据</p> <blockquote> <p>下面是后端接口要求的示例格式 ：</p> <p><img loading="lazy" decoding="async" alt="" height="331" src="http://img.555519.xyz/uploads3/20220609/4057fda773dbc3082a279015c587b6e9.jpg"></p> <p>处理内容：</p> <p>1.字段中文转英文。excel中读入的是<code>姓名</code>,而后端需要的是<code>username</code></p> <p>2.日期处理。从excel中读入的时间是一个number值，而后端需要的是标准日期。</p> </blockquote> <h3>3.3.2 代码：</h3> <pre><code class="language-javascript">    transExcel(results) {       const mapInfo = {         '入职日期': 'timeOfEntry',         '手机号': 'mobile',         '姓名': 'username',         '转正日期': 'correctionTime',         '工号': 'workNumber',         '部门': 'departmentName',         '聘用形式': 'formOfEmployment'       }       return results.map(zhObj =&gt; {         const enObj = {}         const zhKeys = Object.keys(zhObj) // ['姓名', '手机号']          zhKeys.forEach(zhKey =&gt; {           const enKey = mapInfo[zhKey]            enObj[enKey] = zhObj[zhKey]         })          return enObj       })     }</code></pre> <h2>3.4 封装日期处理函数</h2> <pre><code class="language-javascript">// 把excel文件中的日期格式的内容转回成标准时间 // https://blog.csdn.net/qq_15054679/article/details/107712966 export function formatExcelDate(numb, format = '/') {   const time = new Date((numb - 25567) * 24 * 3600000 - 5 * 60 * 1000 - 43 * 1000 - 24 * 3600000 - 8 * 3600000)   time.setYear(time.getFullYear())   const year = time.getFullYear() + ''   const month = time.getMonth() + 1 + ''   const date = time.getDate() + ''   if (format &amp;&amp; format.length === 1) {     return year + format + month + format + date   }   return year + (month &lt; 10 ? '0' + month : month) + (date &lt; 10 ? '0' + date : date) }</code></pre> <p>更新代码：</p> <pre><code class="language-javascript">transExcel(results) {       const mapInfo = {         '入职日期': 'timeOfEntry',         '手机号': 'mobile',         '姓名': 'username',         '转正日期': 'correctionTime',         '工号': 'workNumber',         '部门': 'departmentName',         '聘用形式': 'formOfEmployment'       }       return results.map(zhObj =&gt; {         const enObj = {}         const zhKeys = Object.keys(zhObj) // ['姓名', '手机号']          zhKeys.forEach(zhKey =&gt; {           const enKey = mapInfo[zhKey]            if (enKey === 'timeOfEntry' || enKey === 'correctionTime') {             // 后端需要的日期格式是标准时间              enObj[enKey] = new Date(formatExcelDate(zhObj[zhKey]))           } else {             enObj[enKey] = zhObj[zhKey]           }         })          return enObj       })     }</code></pre> <p><strong>&nbsp;最后，根据实际情况，封装接口并调用即可</strong></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-56519.htm">宠物免费赠送（宠物免费赠送平台）</a></p>
+                                        <p>下一个：<a href="/news/article-57083.htm">成都宠物猫领养中心在哪里?（成都哪里可以领养猫咪2020年的）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-53916.htm" title="python中time.strftime不支持中文，报错UnicodeEncodeError: &#8216;locale&#8217; codec can&#8217;t encode character &#8216;\u5e74&#8217; in po&#8230;">python中time.strftime不支持中文，报错UnicodeEncodeError: &#8216;locale&#8217; codec can&#8217;t encode character &#8216;\u5e74&#8217; in po&#8230;</a></li>
+                        <li class="py-2"><a href="/news/article-57082.htm" title="vue &#8211; 如何实现导入excel功能">vue &#8211; 如何实现导入excel功能</a></li>
+                        <li class="py-2"><a href="/news/article-55971.htm" title="宠物医院开办批准手续（宠物医院开办批准手续需要多久）">宠物医院开办批准手续（宠物医院开办批准手续需要多久）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-node-subscribe.htm" title="VPN机场 | 2月9日18.2M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 2月9日18.2M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54865.htm" title="动物疫苗属于生物农业吗为什么不能用（动物疫苗属于什么行业）">动物疫苗属于生物农业吗为什么不能用（动物疫苗属于什么行业）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-clash-v2ray-ss-ssr.htm" title="VPN For Netflix | 2月14日21.9M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN For Netflix | 2月14日21.9M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-clash-v2ray-ss-ssr.htm" title="VPN For Netflix | 2月13日19.2M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN For Netflix | 2月13日19.2M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54316.htm" title="宠物领养中心需要什么条件（宠物领养中心要钱吗）">宠物领养中心需要什么条件（宠物领养中心要钱吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-node-share.htm" title="VPN For Netflix | 2月17日19.5M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址">VPN For Netflix | 2月17日19.5M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-55970.htm" title="成都宠物托运公司（成都宠物托运公司推荐）">成都宠物托运公司（成都宠物托运公司推荐）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
