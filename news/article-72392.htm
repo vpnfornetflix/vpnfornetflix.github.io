@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-72392.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速入门kotlin-标准函数与静态方法</title>
+        <meta name="description" content="首先我们介绍标准函数 with、run、apply，如果你了解javascript，那理解kotlin的标准函数width、run、apply那简直不要太轻松。with、run、apply与javas" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-72392.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="快速入门kotlin-标准函数与静态方法" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/5fa86981b517773bd1b23506d6b7243d.webp" />
+        <meta property="og:release_date" content="2025-03-12T06:09:03" />
+    <meta property="og:updated_time" content="2025-03-12T06:09:03" />
+        <meta property="og:description" content="首先我们介绍标准函数 with、run、apply，如果你了解javascript，那理解kotlin的标准函数width、run、apply那简直不要太轻松。with、run、apply与javas" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="快速入门kotlin-标准函数与静态方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>快速入门kotlin-标准函数与静态方法</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <p>首先我们介绍标准函数 with、run、apply，如果你了解javascript，那理解kotlin的标准函数width、run、apply那简直不要太轻松。with、run、apply与javascript中的with的意义基本一模一样，只是含有一些细微差别。</p> <h2> <a id="with_4" rel="nofollow"></a>with</h2> <p>with它接收两个参数，第一个参数可以是任意类型的对象，第二个参数是一个Lambda表达式。with函数会在Lambda表达式中提供第一个对象的上下文，可以直接使用对象的属性或方法，而不需要带上对象前缀。with函数会使用Lambda表达式中的最后一行代码作为返回值返回。</p> <pre><code class="prism language-kt"><span class="token keyword">val</span> result <span class="token operator">=</span> <span class="token function">with</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 	<span class="token comment">// 这里是obj的上下文环境</span> 	<span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 调用obj的doSomething方法，无需 obj.doSomething() 这种形式调用</span> <span class="token punctuation">}</span> </code></pre> <h2> <a id="run_15" rel="nofollow"></a>run</h2> <p>run函数的用法与使用场景和with函数非常类似，只是做了些许改动。run函数无法直接调用，他需要在某个对象的基础上去调用它；其次run函数值接收一个Lambda表达式作为参数，并且会在Lambda表达中提供调用对象的上下文，同样将Lambda表达式中的最后一行代码作为返回值。</p> <p>val result = obj.run {<!-- --><br /> // 这里是obj的上下文环境<br /> doSomething() // 调用obj的doSomething方法，无需 obj.doSomething() 这种形式调用<br /> }</p> <h2> <a id="apply_24" rel="nofollow"></a>apply</h2> <p>apply函数和run函数在用法上基本一模一样，唯一区别是apply函数不会将Lambda表达式中的最后一行作为参数返回，而是会返回对象本身.</p> <pre><code class="prism language-kt"><span class="token keyword">val</span> result <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{<!-- --></span> <span class="token comment">// 这里是obj的上下文环境</span> 	<span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 调用obj的doSomething方法，无需 obj.doSomething() 这种形式调用</span> <span class="token punctuation">}</span> <span class="token comment">// result == obj</span> </code></pre> </h1> <p>在java中定义一个静态方法如下：</p> <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Util</span> <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 		<span class="token comment">// todo</span> 	<span class="token punctuation">}</span> <span class="token punctuation">}</span>  <span class="token comment">// 使用静态方法</span> <span class="token class-name">Util</span><span class="token punctuation">.</span><span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre> <p>而Kotlin提供了几种方式去实现类似java中的静态方法</p> <ul> <li>单例类实现静态方法</li> </ul> <pre><code class="prism language-kt"><span class="token comment">// 声明一个单例类</span> <span class="token keyword">object</span> Util <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">fun</span> <span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 		<span class="token comment">// todo</span> 	<span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token comment">// 使用</span> Util<span class="token punctuation">.</span><span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre> <ul> <li>伴生类实现静态方法</li> </ul> <p>单例类的写法会让类中的所有方法全部变成了类似静态方法的调用形式，如果我们只是希望类中的某些方法变成静态方法的调用形式怎么办呢？kotlin给我们提供了伴生类 companion object。</p> <pre><code class="prism language-kt"><span class="token keyword">class</span> Utl <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">companion</span> obj <span class="token punctuation">{<!-- --></span> 		<span class="token keyword">fun</span> <span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 		<span class="token comment">// todo</span> 		<span class="token punctuation">}</span> 	<span class="token punctuation">}</span> <span class="token punctuation">}</span>  <span class="token comment">// 使用</span> Util<span class="token punctuation">.</span><span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre> <p>这个关键字实际会在Util类的内部创建一个伴生类，Kotlin会保证一个类中只会存在一个伴生类对象,调用Util.doSome()实际上是调用Util类中的伴生类对象的doSome方法。</p> <ul> <li>注解实现静态方法</li> </ul> <p>如果我们确确实实需要定义真正的静态方法，我们可以给单例类或companion object伴生类中的方法加上 @JvmStatic注解，那么kotlin编译器就会将这些方法编译成真正的静态方法。注意这个注释一般加在单例类或伴生类的方法上，如果加在普通方法上，会直接提示语法错误。</p> <pre><code class="prism language-kt"><span class="token keyword">class</span> Utl <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">companion</span> obj <span class="token punctuation">{<!-- --></span> 		<span class="token annotation builtin">@JvmStatic</span> 		<span class="token keyword">fun</span> <span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 		<span class="token comment">// todo</span> 		<span class="token punctuation">}</span> 	<span class="token punctuation">}</span> <span class="token punctuation">}</span>  <span class="token comment">// 使用</span> Util<span class="token punctuation">.</span><span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre> <ul> <li>顶层方法实现静态方法</li> </ul> <p>顶层方法指的是哪些没有定义在任何类中的方法，比如我们编写的main()方法。kotlin编译器会将所有的顶层方法全部编译成静态方法。所有的顶层方法在任何位置可以直接被调用，不用管包名路径，也不用创建实例。但如果这个方法在Java代码中调用，需要加上该方法所在的文件名。</p> <pre><code class="prism language-kt"><span class="token comment">// 如我们在Tool.kt 文件中创建了一个顶层方法</span> <span class="token comment">// Tool.kt</span> <span class="token keyword">fun</span> <span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 	<span class="token comment">// todo</span> <span class="token punctuation">}</span>  <span class="token comment">// 在java代码中使用</span> <span class="token keyword">public</span> <span class="token keyword">class</span> JavaTest <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">public</span> void <span class="token function">invokeStaticFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 		<span class="token comment">// 文件名+方法形式调用顶层方法</span> 		Tool<span class="token punctuation">.</span><span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 	<span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-71736.htm">广州宠物领养平台电话（广州宠物狗领养网站）</a></p>
+                                        <p>下一个：<a href="/news/article-72393.htm">广州宠物医院领养 广州宠物医院领养猫</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-57646.htm" title="动物疫苗间隔多久打一次比较好 动物疫苗间隔多久打一次比较好呢">动物疫苗间隔多久打一次比较好 动物疫苗间隔多久打一次比较好呢</a></li>
+                        <li class="py-2"><a href="/news/article-64698.htm" title="1970年农历四月二十四是什么星座（1970年农历4月24日阳历是多少）">1970年农历四月二十四是什么星座（1970年农历4月24日阳历是多少）</a></li>
+                        <li class="py-2"><a href="/news/article-63464.htm" title="动物防疫疫苗的运输规定最新 动物防疫疫苗的运输规定最新版">动物防疫疫苗的运输规定最新 动物防疫疫苗的运输规定最新版</a></li>
+                        <li class="py-2"><a href="/news/article-73058.htm" title="北京中农大动物医院有限公司2022职称材料公 北京中国农业大学动物医院">北京中农大动物医院有限公司2022职称材料公 北京中国农业大学动物医院</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-node-share-links.htm" title="VPN For Netflix | 2月16日19M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址">VPN For Netflix | 2月16日19M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-v2ray.htm" title="VPN For Netflix | 2月19日21.5M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址">VPN For Netflix | 2月19日21.5M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-73059.htm" title="宠物粮食加工设备有哪些品牌（宠物粮加工机器）">宠物粮食加工设备有哪些品牌（宠物粮加工机器）</a></li>
+                        <li class="py-2"><a href="/news/article-71735.htm" title="动物疫苗的种类和制备原理是什么呢（动物疫苗制备流程）">动物疫苗的种类和制备原理是什么呢（动物疫苗制备流程）</a></li>
+                        <li class="py-2"><a href="/news/article-66563.htm" title="宠物领养证办理需要什么条件和手续费（宠物领养证如何办理）">宠物领养证办理需要什么条件和手续费（宠物领养证如何办理）</a></li>
+                        <li class="py-2"><a href="/news/article-66565.htm" title="宠物品牌起名字大全（宠物品牌介绍）">宠物品牌起名字大全（宠物品牌介绍）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">38</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
