@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-76431.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++入门   面向对象的基础</title>
+        <meta name="description" content="C++是一门面向对象的语言，在C语言的基础上有了进一步的扩充与完善。   1、面向对象的特征：  封装：封装是一个用来将对象的状态和行为捆绑到一个单一逻辑单元机制的正式术语。不是面向对象语言所特有，在" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-76431.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="C++入门   面向对象的基础" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/eba8312c7e47e1dbb298f7d314050d03.webp" />
+        <meta property="og:release_date" content="2025-03-18T06:13:27" />
+    <meta property="og:updated_time" content="2025-03-18T06:13:27" />
+        <meta property="og:description" content="C++是一门面向对象的语言，在C语言的基础上有了进一步的扩充与完善。   1、面向对象的特征：  封装：封装是一个用来将对象的状态和行为捆绑到一个单一逻辑单元机制的正式术语。不是面向对象语言所特有，在" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C++入门   面向对象的基础">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>C++入门   面向对象的基础</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>C++是一门面向对象的语言，在C语言的基础上有了进一步的扩充与完善。</p> <div>  <strong>1、面向对象的特征：</strong> </div> <p><strong>封装：</strong>封装是一个用来将对象的状态和行为捆绑到一个单一逻辑单元机制的正式术语。不是面向对象语言所特有，在面向过程的C语言中用结构封装了数据，函数封装了逻辑。但是面向对象封装了数据和逻辑，一定意义上面向对象的封装更加完美。</p> <div>  <strong>继承：</strong>继承是定义新类的一种机制，使用这种机制创建新类时只需要声明新类和已创建类之间的差别，对于一个特定的继承关系，将新类称为子类或者派生类，被继承的类成为父类或者基类。 </div> <div>  <strong>多态：</strong>指属于两个或多个不同类的对象以各自类相关的不同方式响应同一消息的能力。多态使得消息发送者能给一组具有公共接口的对象发送相同的消息，接收者做出相应的回应。 </div> <div>  <strong>2、C++的类</strong><br />   </div> <div>  类的标准形式： </div> <div>  class &lt;类名&gt; </div> <div>  { </div> <div>  &nbsp; &nbsp; private： </div> <div>  &nbsp; &nbsp; &nbsp; &nbsp; 私有数据和成员函数 </div> <div>  &nbsp; &nbsp; public： </div> <div>  &nbsp; &nbsp; &nbsp; &nbsp; 公有数据和成员函数 </div> <div>  &nbsp; &nbsp; protected： </div> <div>  &nbsp; &nbsp; &nbsp; &nbsp; 保护数据和成员函数 </div> <div>  } </div> <div>  private（私有属性）：说明类的成员是私有的，可以被该类的成员函数访问，但类变量不能直接访问； </div> <div>  public （公有属性）：说明类的成员是公有的，可以被该类的成员函数和类变量访问； </div> <div>  protected（保护属性）：说明该类的成员是被保护的，可以被该类的成员函数和派生类访问，不能被类变量访问。 </div> <div>  <strong>3、this指针分析</strong> </div> <div>  <strong>&nbsp; &nbsp; </strong>this指针在类的每个成员函数中都存在，只是没有显示。this指针是通过函数参数的首参数来传递的，在成员函数开始执行前构造好，在成员函数执行结束后释放。 </div> <div>  <strong>4、构造函数和析构函数</strong> &nbsp; &nbsp; </div> <div>  <strong> 构造函数：</strong>对象被创建时，系统自动调用构造函数，构造函数是类中一种特殊的函数成员，用来在创建对象时初始化对象的数据成员。构造函数的函数名和类名相同，无返回值。<br />  <u><em>如果类中没有定义构造函数，编译器会提供一个默认构造函数，无返回值，无参数，函数体为空。但如果类中定义了构造函数，编译器就不再提供默认的构造函数。</em></u> </div> <div>  <strong>析构函数：</strong>作用和构造函数相反，用于释放资源。当一个对象的生命周期结束前或者被delete（堆对象）时，编译器自动调用其析构函数。<br />  <em><u>如果类中没有定义析构函数，编译器会提供一个默认析构函数，但默认析构函数不会释放动态分配的资源。</u></em> </div> <div>  析构函数形式：<br />  <strong><span style="background-color:rgb(255,255,255);">~类名（）{ &nbsp;&nbsp; }</span></strong> </div> <div>  <strong>类应用举例：随机生成一个数组</strong> </div> <pre><code class="language-cpp"><del><em> </em></del></code></pre> <p></p> <pre><code class="language-cpp"></code></pre> <div>  <code class="language-cpp">#ifndef _ARRAY_H #define _ARRAY_H class Array { private: int *m_data; </code> </div> <div>  <code class="language-cpp"> int m_length; void SetLength(int l); void InitArray(); void SetValue(int index, int val); int GetLength(); int GetValue(int index); }; #endif </code> </div> <p><code class="language-cpp"><br /></code></p> <pre class="cpp"><code class="language-cpp">#include "Array.h" #include &lt;iostream&gt; #include &lt;cstdlib&gt;  using namespace std;  void Array::SetLength(int l) { 	m_length = l; }  void Array::InitArray() { 	if (m_length &lt; 0) 	{ 		m_length = 0; 	}  	m_data = (int *)malloc(sizeof(int) * m_length); 	if (NULL == m_data) 	{ 		cout &lt;&lt; "malloc failure!" &lt;&lt; endl; 	} }  void Array::SetValue(int index, int val) { 	m_data[index] = val; }  int Array::GetLength() { 	return m_length; }  int Array::GetValue(int index) { 	return m_data[index]; } </code></pre> <pre><code class="language-cpp">#include "Array.h" #include &lt;iostream&gt;  using namespace std;  int main() { 	int length, i; 	Array a, b;  	cout &lt;&lt; "Please input " &lt;&lt; endl; 	cin &gt;&gt; length;  	a.SetLength(length); 	a.InitArray();  	for (i = 0; i &lt; a.GetLength(); i++) 	{ 		a.SetValue(i, i + 1); 	}  	for (int j = 0; j &lt; a.GetLength(); j++) 	{ 		cout &lt;&lt; a.GetValue(j) &lt;&lt; endl; 	}  	return 0; } </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-76430.htm">spark1.6.1和2.4读取csv文件，转为为DataFrame和使用SQL</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-76430.htm" title="spark1.6.1和2.4读取csv文件，转为为DataFrame和使用SQL">spark1.6.1和2.4读取csv文件，转为为DataFrame和使用SQL</a></li>
+                        <li class="py-2"><a href="/news/article-68449.htm" title="宠物鸟交易网站（宠物鸟商城）">宠物鸟交易网站（宠物鸟商城）</a></li>
+                        <li class="py-2"><a href="/news/article-69763.htm" title="兽用疫苗稀释后多久过期啊（兽用疫苗佐剂）">兽用疫苗稀释后多久过期啊（兽用疫苗佐剂）</a></li>
+                        <li class="py-2"><a href="/news/article-63464.htm" title="动物防疫疫苗的运输规定最新 动物防疫疫苗的运输规定最新版">动物防疫疫苗的运输规定最新 动物防疫疫苗的运输规定最新版</a></li>
+                        <li class="py-2"><a href="/news/article-58848.htm" title="Go 语言接口及使用接口实现链表插入">Go 语言接口及使用接口实现链表插入</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-node-share.htm" title="VPN For Netflix | 2月26日20.3M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址">VPN For Netflix | 2月26日20.3M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-59931.htm" title="Minikube使用文档">Minikube使用文档</a></li>
+                        <li class="py-2"><a href="/news/article-55415.htm" title="给动物注射疫苗属于什么行为类型（给动物打疫苗属于什么）">给动物注射疫苗属于什么行为类型（给动物打疫苗属于什么）</a></li>
+                        <li class="py-2"><a href="/news/article-64082.htm" title="如何在MySQL中使用复合INTERVAL单元？">如何在MySQL中使用复合INTERVAL单元？</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-free-subscribe-node.htm" title="VPN For Netflix | 3月10日18.3M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN For Netflix | 3月10日18.3M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">53</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
