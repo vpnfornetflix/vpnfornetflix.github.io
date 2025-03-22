@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-78480.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeRTOS实时操作系统信号量基础_操作系统</title>
+        <meta name="description" content="目录  前言 1.信号量简介 2.二进制信号量 3.计数信号量 4.互斥量 5.递归互斥量    前言 本文介绍信号量的基础知识，详细源码分析见FreeRTOS进阶信号量分析  1.信号量简介 Fre" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-78480.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="FreeRTOS实时操作系统信号量基础_操作系统" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/abca5d38eac1ed3af4f5eb34dffaa203.webp" />
+        <meta property="og:release_date" content="2025-03-21T10:31:35" />
+    <meta property="og:updated_time" content="2025-03-21T10:31:35" />
+        <meta property="og:description" content="目录  前言 1.信号量简介 2.二进制信号量 3.计数信号量 4.互斥量 5.递归互斥量    前言 本文介绍信号量的基础知识，详细源码分析见FreeRTOS进阶信号量分析  1.信号量简介 Fre" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="FreeRTOS实时操作系统信号量基础_操作系统">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>FreeRTOS实时操作系统信号量基础_操作系统</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">前言</a></li> <li><a href="#_label1" rel="nofollow">1.信号量简介</a></li> <li><a href="#_label2" rel="nofollow">2.二进制信号量</a></li> <li><a href="#_label3" rel="nofollow">3.计数信号量</a></li> <li><a href="#_label4" rel="nofollow">4.互斥量</a></li> <li><a href="#_label5" rel="nofollow">5.递归互斥量</a></li> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>前言</h2> <p>本文介绍信号量的基础知识，详细源码分析见<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jb51.net/article/243799.htm"  target="_blank" rel="nofollow">FreeRTOS进阶信号量分析</a></p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>1.信号量简介</h2> <p>FreeRTOS的信号量包括二进制信号量、计数信号量、互斥信号量（以后简称互斥量）和递归互斥信号量（以后简称递归互斥量）。</p> <p>我们可以把互斥量和递归互斥量看成特殊的信号量。互斥量和信号量在用法上不同：</p> <ul> <li>信号量用于同步，任务间或者任务和中断间同步；互斥量用于互锁，用于保护同时只能有一个任务访问的资源，为资源上一把锁。</li> <li>信号量用于同步时，一般是一个任务（或中断）给出信号，另一个任务获取信号；互斥量必须在同一个任务中获取信号、同一个任务给出信号。</li> <li>互斥量具有优先级继承，信号量没有。</li> <li>互斥量不能用在中断服务程序中，信号量可以。</li> <li>创建互斥量和创建信号量的API函数不同，但是共用获取和给出信号API函数；</li> </ul> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>2.二进制信号量</h2> <p>二进制信号量既可以用于互斥功能也可以用于同步功能。</p> <p>二进制信号量和互斥量非常相似，但是有一些细微差别：互斥量包含一个优先级继承机制，二进制信号量则没有这个机制。这使得二进制信号量更好的用于实现同步（任务间或任务和中断间），互斥量更好的用于实现简单互斥。本节仅描述用于同步的二进制信号量。</p> <p>信号量API函数允许指定一个阻塞时间。当任务企图获取一个无效信号量时，任务进入阻塞状态，阻塞时间用来确定任务进入阻塞的最大时间，阻塞时间单位为系统节拍周期时间。如果有多个任务阻塞在同一个信号量上，那么当信号量有效时，具有最高优先级别的任务最先解除阻塞。</p> <p>可以将二进制信号量看作只有一个项目（item）的队列，因此这个队列只能为空或满（因此称为二进制）。任务和中断使用队列无需关注谁控制队列---只需要知道队列是空还是满。利用这个机制可以在任务和中断之间同步。</p> <p>考虑这样一种情况，一个任务用来维护外设。使用轮询的方法会浪费CPU资源并且妨碍其它任务执行。更好的做法是任务的大部分时间处于阻塞状态（允许其它任务执行），直到某些事件发生该任务才执行。可以使用二进制信号量实现这种应用：当任务取信号量时，因为此时尚未发生特定事件，信号量为空，任务会进入阻塞状态；当外设需要维护时，触发一个中断服务例程，该中断服务仅仅给出信号量（向队列写数据）。任务只是取信号，并不需要归还，中断服务只是给信号。</p> <p>任务的优先级可以用于确保外设及时获得维护。还可以使用队列来代替二进制信号量。中断例程可以捕获与外设事件相关的数据并将它发往任务的队列。任务发现队列数据有效时解除阻塞，如果需要，则进行数据处理。第二种方案使得中断执行尽可能的短，其它处理过程可以在任务中实现。</p> <p>注：中断程序中决不可使用无“FromISR”结尾的API函数。</p> <p>注：在大部分应用场合，任务通知都可以代替二进制信号量，并且速度更快、生成的代码更少。</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220423/f766bc1fbdb3a8214136f5b6f6f9db34.jpg"></p> <p>图1-1：中断和任务之间同步---使用信号量</p> <p>如图1-1所示，程序开始运行时，信号量无效，因此任务阻塞在这个信号量下。一段时间后，一个中断发生，在中断服务程序中使用API函数xSemaphoreGiveFromISR()给出了一个信号，信号量变得有效。当退出中断服务程序后，执行上下文切换，任务解除阻塞，使用API函数xSemaphoreTake()取走信号量并执行任务。之后信号量变得无效，任务再次进入阻塞。</p> <p class="maodian"><a name="_label3" rel="nofollow"></a></p> <h2>3.计数信号量</h2> <p>二进制信号量可以被认为是长度为1的队列，计数信号量则可以被认为长度大于1的队列。此外，信号量使用者不必关心存储在队列中的数据，只需关心队列是否为空。</p> <p>通常计数信号量用于下面两种事件：</p> <p>计数事件：在这种场合下，每当事件发生，事件处理程序将给出一个信号（信号量计数值增1），当处理事件时，处理程序会取走信号量（信号量计数值减1）。因此，计数值是事件发生的数量和事件处理的数量差值。在这种情况下，计数信号量在创建时其值为0。</p> <p>资源管理：这种用法下，计数值表示有效的资源数目。任务必须先获取信号量才能获取资源控制权。当计数值减为零时表示没有的资源。当任务完成后，它会返还信号量---信号量计数值增加。在这种情况下，信号量创建时，计数值等于最大资源数目。</p> <p>注：中断程序中决不可使用无“FromISR”结尾的API函数。</p> <p>注：在大部分应用场合，任务通知都可以代替计数信号量，并且速度更快、生成的代码更少。</p> <p class="maodian"><a name="_label4" rel="nofollow"></a></p> <h2>4.互斥量</h2> <p>互斥量是一个包含优先级继承机制的二进制信号量。用于实现同步（任务之间或者任务与中断之间）的话，二进制信号量是更好的选择，互斥量用于简单的互锁。</p> <p>用于互锁的互斥量可以充当保护资源的令牌。当一个任务希望访问某个资源时，它必须先获取令牌。当任务使用完资源后，必须还回令牌，以便其它任务可以访问同一资源。</p> <p>互斥量和信号量使用相同的API函数，因此互斥量也允许指定一个阻塞时间。阻塞时间单位为系统节拍周期时间，数目表示获取互斥量无效时最多处于阻塞状态的系统节拍周期个数。</p> <p>互斥量与二进制信号量最大的不同是：互斥量具有优先级继承机制。也就是说，如果一个互斥量（令牌）正在被一个低优先级任务使用，此时一个高优先级企图获取这个互斥量，高优先级任务会因为得不到互斥量而进入阻塞状态，正在使用互斥量的低优先级任务会临时将自己的优先级提升，提升后的优先级与与进入阻塞状态的高优先级任务相同。这个优先级提升的过程叫做优先级继承。这个机制用于确保高优先级任务进入阻塞状态的时间尽可能短，以及将已经出现的“优先级翻转”影响降低到最小。</p> <p>在很多场合中，某个硬件资源只有一个，当低优先级任务占用该资源的时候，即便高优先级任务也只能乖乖的等待低优先级任务释放资源。这里高优先级任务无法运行而低优先级任务可以运行的现象称为“优先级翻转”。</p> <p>为什么优先级继承能够降低优先级翻转的影响呢？举个例子，现在有任务A、任务B和任务C，三个任务的优先级顺序为任务C&gt;任务B&gt;任务A。任务A和任务C都要使用某一个硬件资源，并且当前任务A占有该资源。</p> <p>先看没有优先级继承的情况：任务C也要使用该资源，但是此时任务A正在使用这个资源，因此任务C进入阻塞，此时三个任务的优先级顺序没有发生变化。在任务C进入阻塞之后，某硬件产生了一次中断，唤醒了一个事件，该事件可以解除任务B的阻塞状态。在中断结束后，因为任务B的优先级是大于任务A的，所以任务B抢占任务A的CPU权限。那么任务C的阻塞时间就至少为：中断处理时间+任务B的运行时间+任务A的运行时间。</p> <p>再看有优先级继承的情况：任务C也要使用该资源，但是此时任务A正在使用这个资源，因此任务C进入阻塞，此时由于优先级A会继承任务C的优先级，三个任务的优先级顺序发生了变化，新的优先级顺序为：任务C=任务A&gt;任务B。在任务C进入阻塞之后，某硬件产生了一次中断，唤醒了一个事件，该事件可以解除任务B的阻塞状态。在中断结束后，因为任务A的优先级临时被提高，大于任务B的优先级，所以任务A继续获得CPU权限。任务A完成后，处于高优先级的任务C会接管CPU。所以任务C的阻塞时间为：中断处理时间+任务A的运行时间。看，任务C的阻塞时间变小了，这就是优先级继承的优势。</p> <p>优先级继承不能解决优先级反转，只能将这种情况的影响降低到最小。硬实时系统在一开始设计时就要避免优先级反转发生。</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220423/66eb325fcad45c1616e05a262d06df7f.jpg"></p> <p>图4-1 互斥量用于保护资源</p> <p>如图4-1所示，互斥量用来保护资源。为了访问资源，任务必须先获取互斥量。任务A想获取资源，首先它使用API函数xSemaphoreTake()获取信号量，成功获取到信号量后，任务A就持有了互斥量，可以安全的访问资源。期间任务B开始执行，它也想访问资源，任务B也要先获得信号量，但是信号量此时是无效的，任务B进入阻塞状态。当任务A执行完成后，使用API函数xSemaphoreGive()释放信号量。之后任务B解除阻塞，任务B使用API函数xSemaphoreTake()获取并得到信号量，任务B可以访问资源。</p> <p class="maodian"><a name="_label5" rel="nofollow"></a></p> <h2>5.递归互斥量</h2> <p>已经获取递归互斥量的任务可以重复获取该递归互斥量。使用xSemaphoreTakeRecursive()函数成功获取几次递归互斥量，就要使用xSemaphoreGiveRecursive()函数返还几次，在此之前递归互斥量都处于无效状态。比如，某个任务成功获取5次递归互斥量，那么在它没有返还5次该递归互斥量之前，这个互斥量对别的任务无效。</p> <p>递归互斥量可以看成带有优先级继承机制的信号量，获取递归互斥量的任务在用完后必须返还。</p> <p>互斥量不可以用在中断服务程序中，这是因为：</p> <ul> <li>互斥量具有优先级继承机制，只有在任务中获取或给出互斥才有意义。</li> <li>中断不能因为等待互斥量而阻塞。</li> </ul> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-77792.htm">动物疫苗监管部门投诉电话 动物疫苗监管部门投诉电话是多少</a></p>
+                                        <p>下一个：<a href="/news/article-78481.htm">长沙哪有宠物领养 长沙哪有宠物领养的地方</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-64084.htm" title="天津宠物领养救助中心地址 天津宠物领养救助中心地址电话">天津宠物领养救助中心地址 天津宠物领养救助中心地址电话</a></li>
+                        <li class="py-2"><a href="/news/article-57082.htm" title="vue &#8211; 如何实现导入excel功能">vue &#8211; 如何实现导入excel功能</a></li>
+                        <li class="py-2"><a href="/news/article-57646.htm" title="动物疫苗间隔多久打一次比较好 动物疫苗间隔多久打一次比较好呢">动物疫苗间隔多久打一次比较好 动物疫苗间隔多久打一次比较好呢</a></li>
+                        <li class="py-2"><a href="/news/article-78481.htm" title="长沙哪有宠物领养 长沙哪有宠物领养的地方">长沙哪有宠物领养 长沙哪有宠物领养的地方</a></li>
+                        <li class="py-2"><a href="/news/article-79164.htm" title="宠物粮食批发进货渠道有哪些地方呢视频（宠物粮食在哪里进货）">宠物粮食批发进货渠道有哪些地方呢视频（宠物粮食在哪里进货）</a></li>
+                        <li class="py-2"><a href="/news/article-77113.htm" title="南京宠物领养中心在哪儿（南京最大的宠物店免费领养）">南京宠物领养中心在哪儿（南京最大的宠物店免费领养）</a></li>
+                        <li class="py-2"><a href="/news/article-59931.htm" title="Minikube使用文档">Minikube使用文档</a></li>
+                        <li class="py-2"><a href="/news/article-79163.htm" title="动物疫苗多少钱一支啊图片及价格查询表（动物疫苗法最新消息2019）">动物疫苗多少钱一支啊图片及价格查询表（动物疫苗法最新消息2019）</a></li>
+                        <li class="py-2"><a href="/news/article-57647.htm" title="宠物店怎么拿货便宜（宠物店怎么拿货便宜点）">宠物店怎么拿货便宜（宠物店怎么拿货便宜点）</a></li>
+                        <li class="py-2"><a href="/news/article-61675.htm" title="动物疫苗上市公司有哪些企业名称和地址（动物疫苗的上市公司有哪些）">动物疫苗上市公司有哪些企业名称和地址（动物疫苗的上市公司有哪些）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">65</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
