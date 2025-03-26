@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-81246.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何确定SVG文本框的宽度或在&#8217;x&#8217;字符后强制换行</title>
+        <meta name="description" content="使用该getBBox()方法，一次向一个文本对象添加一个单词。如果宽度过大，则需要添加换行符。 var&nbsp;a&nbsp;=&nbsp;Raphael(500,&nbsp;500); var&n" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-81246.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="如何确定SVG文本框的宽度或在&#8217;x&#8217;字符后强制换行" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/eba8312c7e47e1dbb298f7d314050d03.webp" />
+        <meta property="og:release_date" content="2025-03-25T08:19:45" />
+    <meta property="og:updated_time" content="2025-03-25T08:19:45" />
+        <meta property="og:description" content="使用该getBBox()方法，一次向一个文本对象添加一个单词。如果宽度过大，则需要添加换行符。 var&nbsp;a&nbsp;=&nbsp;Raphael(500,&nbsp;500); var&n" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="如何确定SVG文本框的宽度或在&#8217;x&#8217;字符后强制换行">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>如何确定SVG文本框的宽度或在&#8217;x&#8217;字符后强制换行</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p>使用该<code>getBBox()</code>方法，一次向一个文本对象添加一个单词。如果宽度过大，则需要添加换行符。</p> <pre>var&nbsp;a&nbsp;=&nbsp;Raphael(500,&nbsp;500); var&nbsp;b&nbsp;=&nbsp;a.text(100,&nbsp;100).attr('text-anchor',&nbsp;'start'); var&nbsp;maxWidth&nbsp;=&nbsp;100; var&nbsp;content&nbsp;=&nbsp;"Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Duis&nbsp;nec&nbsp;semper&nbsp;mauris.&nbsp;Sed&nbsp;gravida&nbsp;augue&nbsp;feugiat&nbsp;nulla&nbsp;ultrices&nbsp;efficitur.&nbsp;Class&nbsp;aptent&nbsp;taciti&nbsp;sociosqu&nbsp;ad&nbsp;litora&nbsp;torquent&nbsp;per&nbsp;conubia&nbsp;nostra,&nbsp;per&nbsp;inceptos&nbsp;himenaeos.&nbsp;Sed&nbsp;sit&nbsp;amet&nbsp;lobortis&nbsp;eros,&nbsp;et&nbsp;lobortis&nbsp;diam.&nbsp;Aenean&nbsp;arcu&nbsp;velit,&nbsp;condimentum&nbsp;eu&nbsp;lacus&nbsp;in,&nbsp;dignissim&nbsp;bibendum&nbsp;odio.&nbsp;Mauris&nbsp;ultricies&nbsp;nunc&nbsp;et&nbsp;lorem&nbsp;bibendum&nbsp;dignissim.&nbsp;Ut&nbsp;porttitor&nbsp;purus&nbsp;vitae&nbsp;diam&nbsp;efficitur&nbsp;ultrices.&nbsp;Integer&nbsp;dignissim&nbsp;efficitur&nbsp;lorem,&nbsp;non&nbsp;vehicula&nbsp;diam&nbsp;scelerisque&nbsp;at&nbsp;"; var&nbsp;w&nbsp;=&nbsp;content.split("&nbsp;"); var&nbsp;tempText&nbsp;=&nbsp;"";  for&nbsp;(var&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;w.length;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;&nbsp;b.attr("text",&nbsp;tempText&nbsp;+&nbsp;"&nbsp;"&nbsp;+&nbsp;words[i]); &nbsp;&nbsp;&nbsp;if&nbsp;(b.getBBox().width&nbsp;&gt;&nbsp;maxWidth)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempText&nbsp;+=&nbsp;"\n"&nbsp;+&nbsp;words[i]; &nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempText&nbsp;+=&nbsp;"&nbsp;"&nbsp;+&nbsp;words[i]; &nbsp;&nbsp;&nbsp;} } b.attr("text",&nbsp;tempText.substring(1));</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-80535.htm">动物疫苗价格表图片高清大全及价格 动物疫苗价格表图片高清大全及价格图</a></p>
+                                        <p>下一个：<a href="/news/article-81247.htm">王允海宠物医院地址在哪里啊（王允海宠物医院地址在哪里啊）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-free-node-subscribe.htm" title="VPN For Netflix | 3月24日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN For Netflix | 3月24日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-81918.htm" title="省内寄猫咪一般多少钱（省内邮寄猫咪多少钱）">省内寄猫咪一般多少钱（省内邮寄猫咪多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-57082.htm" title="vue &#8211; 如何实现导入excel功能">vue &#8211; 如何实现导入excel功能</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-clash-v2ray-ss-ssr.htm" title="VPN For Netflix | 3月6日21.4M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址">VPN For Netflix | 3月6日21.4M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-free-v2ray.htm" title="VPN For Netflix | 3月8日20.3M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN For Netflix | 3月8日20.3M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-71736.htm" title="广州宠物领养平台电话（广州宠物狗领养网站）">广州宠物领养平台电话（广州宠物狗领养网站）</a></li>
+                        <li class="py-2"><a href="/news/article-60508.htm" title="宠物美容师要培训多久（宠物美容师宠物美容培训费用）">宠物美容师要培训多久（宠物美容师宠物美容培训费用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-clash-v2ray-ss-ssr.htm" title="VPN For Netflix | 3月16日22.2M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址">VPN For Netflix | 3月16日22.2M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-64082.htm" title="如何在MySQL中使用复合INTERVAL单元？">如何在MySQL中使用复合INTERVAL单元？</a></li>
+                        <li class="py-2"><a href="/news/article-63464.htm" title="动物防疫疫苗的运输规定最新 动物防疫疫苗的运输规定最新版">动物防疫疫苗的运输规定最新 动物防疫疫苗的运输规定最新版</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
