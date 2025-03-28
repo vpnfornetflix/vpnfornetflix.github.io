@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-83351.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微服务架构介绍</title>
+        <meta name="description" content="文章目录  微服务架构介绍   一、技术架构演变     1.1 单体应用 1.2 垂直应用 1.3 RPC 分布应用 1.4 SOA 流动计算架构 1.5 微服务     二、微服务简介     2" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-83351.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="微服务架构介绍" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/5fa86981b517773bd1b23506d6b7243d.webp" />
+        <meta property="og:release_date" content="2025-03-28T09:55:47" />
+    <meta property="og:updated_time" content="2025-03-28T09:55:47" />
+        <meta property="og:description" content="文章目录  微服务架构介绍   一、技术架构演变     1.1 单体应用 1.2 垂直应用 1.3 RPC 分布应用 1.4 SOA 流动计算架构 1.5 微服务     二、微服务简介     2" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="微服务架构介绍">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>微服务架构介绍</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>文章目录</h3> <ul> <li><a href="#_3" rel="nofollow">微服务架构介绍</a></li> <li> <ul> <li><a href="#_5" rel="nofollow">一、技术架构演变</a></li> <li> <ul> <li> <ul> <li><a href="#11_____10" rel="nofollow">1.1 单体应用</a></li> <li><a href="#12___16" rel="nofollow">1.2 垂直应用</a></li> <li><a href="#13_RPC__18" rel="nofollow">1.3 RPC 分布应用</a></li> <li><a href="#14_SOA__20" rel="nofollow">1.4 SOA 流动计算架构</a></li> <li><a href="#15__24" rel="nofollow">1.5 微服务</a></li> </ul> </li> </ul> </li> <li><a href="#_28" rel="nofollow">二、微服务简介</a></li> <li> <ul> <li> <ul> <li><a href="#21___34" rel="nofollow">2.1 优点</a></li> <li><a href="#22__45" rel="nofollow">2.2 缺点</a></li> </ul> </li> </ul> </li> <li><a href="#SOA_vs__55" rel="nofollow">三、SOA vs 微服务</a></li> <li><a href="#Dubbo_vs_Spring_Cloud_72" rel="nofollow">四、Dubbo vs Spring Cloud</a></li> <li> <ul> <li> <ul> <li><a href="#_94" rel="nofollow">总结</a></li> </ul> </li> </ul> </li> <li><a href="#_114" rel="nofollow">五、微服务设计原则</a></li> <li> <ul> <li> <ul> <li><a href="#51_AKF__116" rel="nofollow">5.1 AKF 拆分原则</a></li> <li><a href="#52__124" rel="nofollow">5.2 前后端分离原则</a></li> <li><a href="#53__133" rel="nofollow">5.3 无状态服务</a></li> <li><a href="#54_Restful__138" rel="nofollow">5.4 Restful 通信风格</a></li> </ul> </li> </ul> </li> </ul> </li> </ul> </div> </h1> <h2><a id="_5" rel="nofollow"></a>一、技术架构演变</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/4e82ceedc0d1e55c2cdeafa7cdc45661.jpg" alt="微服务架构介绍"></p> <h4><a id="11_____10" rel="nofollow"></a>1.1 单体应用</h4> <p> model1模式: jsp + java</p> <p> model2模式: MVC 模式</p> <h4><a id="12___16" rel="nofollow"></a>1.2 垂直应用</h4> <h4><a id="13_RPC__18" rel="nofollow"></a>1.3 RPC 分布应用</h4> <h4><a id="14_SOA__20" rel="nofollow"></a>1.4 SOA 流动计算架构</h4> <p> 资源调度、负载均衡、动态服务创建…服务治理</p> <h4><a id="15__24" rel="nofollow"></a>1.5 微服务</h4> <p> 微小、单一职责</p> <h2><a id="_28" rel="nofollow"></a>二、微服务简介</h2> <p> 微服务就是将一个单体架构的应用按业务划分为一个个独立运行的程序即服务，他们之间通过HTTP协议进行通信（也可通过消息队列，如kafaka、RabbitMq等），可以采用不同的编程语言，使用不同的存储技术，自动化部署，减少人为控制，降低出错概率。服务数量较多，管理越来越复杂，因此采用集中化管理，如Eureka、Zookeeper 等比较常见的服务集中管理框架。</p> <p> 微服务是一种架构风格，一种大型的复杂软件应用，由一个或多个微服务组成，系统的各种微服务可被单独部署，各个微服务之间松耦合，每个微服务仅关注于完成一件任务并很好的完成该任务。</p> <h4><a id="21___34" rel="nofollow"></a>2.1 优点</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/118676777b0d4ca7ce0afe31aafabaa9.jpg" alt="微服务架构介绍"></p> <ul> <li>测试容易</li> <li>可伸缩性强</li> <li>可靠性强</li> <li>跨语言</li> <li>协同开发</li> <li>方便系统迭代</li> </ul> <h4><a id="22__45" rel="nofollow"></a>2.2 缺点</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/19d49ab3ee007df33ae83ac76fa2ff4e.jpg" alt="微服务架构介绍"></p> <ul> <li>运维成本高，部署项目多</li> <li>接口兼容版本问题</li> <li>分布式系统复杂性</li> <li>分布式事务</li> </ul> <h2><a id="SOA_vs__55" rel="nofollow"></a>三、SOA vs 微服务</h2> <blockquote> <p>微服务是 SOA 发展出来的产物，是一种比较现代化的细粒度的 SOA 实现方式</p> </blockquote> <table> <thead> <tr> <th>SOA（面向服务）</th> <th>微服务</th> </tr> </thead> <tbody> <tr> <td>应用程序服务的可重用性最大化</td> <td>专注于解耦</td> </tr> <tr> <td>系统性的改变需要整体修改</td> <td>系统性的改变是创建新服务</td> </tr> <tr> <td>DevOps和持续交付正在变得流行，不是主流</td> <td>强烈官族DevOps和持续交付</td> </tr> <tr> <td>专注一业务功能重用</td> <td>更重视 上下文 边界 的概念</td> </tr> <tr> <td>通信使用企业服务总线 ESB</td> <td>对于通信，使用较少和简单的消息系统</td> </tr> <tr> <td>支持多种消息协议</td> <td>使用轻量级协议，如HTTP、REST等</td> </tr> <tr> <td>对部署到它的所有服务使用通用平台</td> <td>应用程序服务器不是真的被使用，通常使用云平台</td> </tr> <tr> <td>容器（docker）的使用不太受欢迎</td> <td>容器在微服务方面效果很好</td> </tr> <tr> <td>SOA 服务共享数据存储</td> <td>每个微服务可以拥有单独的数据存储</td> </tr> <tr> <td>共同的治理和标准</td> <td>轻松的治理，更注重团队协作和选择自由</td> </tr> </tbody> </table> <h2><a id="Dubbo_vs_Spring_Cloud_72" rel="nofollow"></a>四、Dubbo vs Spring Cloud</h2> <ul> <li> <p>Spring 全家桶</p> <p>用起来很舒服，无所不能</p> </li> <li> <p>Dubbo</p> <p>很多国内企业还在用，支持RESTful 风格的 API，调用 API 像调用本地 API 一样，同时其基于接口的方式增加了服务间的耦合</p> </li> </ul> <table> <thead> <tr> <th>对比项</th> <th>Spring Cloud</th> <th>Dubbo</th> </tr> </thead> <tbody> <tr> <td>服务注册中心</td> <td>Spring Cloud Netflix Eureka</td> <td>ZooKeeper，Nacos</td> </tr> <tr> <td>服务调用方式</td> <td>REST API</td> <td>RPC</td> </tr> <tr> <td>服务网关</td> <td>Sping Cloud Netflix Zuul</td> <td>Dubbo Proxy</td> </tr> <tr> <td>断路由</td> <td>Sping Cloud Netflix Hystrix</td> <td>Sentinet</td> </tr> <tr> <td>分布式配置</td> <td>Sping Cloud Netflix Config</td> <td>Nacos</td> </tr> <tr> <td>服务跟踪</td> <td>Sping Cloud Netflix Sleuth</td> <td>无</td> </tr> <tr> <td>消息总线</td> <td>Sping Cloud Netflix Bus</td> <td>无</td> </tr> <tr> <td>数据流</td> <td>Sping Cloud Netflix Stream</td> <td>无</td> </tr> <tr> <td>批量任务</td> <td>Sping Cloud Netflix Task</td> <td>无</td> </tr> </tbody> </table> <h4><a id="_94" rel="nofollow"></a>总结</h4> <ul> <li> <p>Dubbo由于是二进制传输，占用带宽更少</p> </li> <li> <p>Spring Cloud 是http 协议传输，带宽比较多，同时使用 http，一般会使用Json报文，消耗会更大</p> </li> <li> <p>Dubbo 开发难度打，Dubbo 的 jar 包依赖问题很多大型工程无法解决</p> </li> <li> <p>Spring Cloud 的接口协议比较自由且松散，需要更强有力的行政做事来限制接口无序升级</p> </li> <li> <p>Dubbo 的注册中心可以选择ZooKeeper Redis 等多种，Spring Cloud 只能用 eureka 或者自研</p> </li> <li> <p>系统结构简易程序：</p> <p> Spring Cloud 系统结构更简单：注册 + Spring MVC = Spring Cloud</p> <p> Dubbo： 各种复杂Url、protocol、register 等</p> </li> <li> <p>性能：Dubbo 网络消耗小于 Spring Cloud ，但是国内大多数公司，网络消耗不是太大问题，如果成了问题，可以通过压缩、二进制、高速缓存、分段降级等方法，很容易解决</p> </li> </ul> <h2><a id="_114" rel="nofollow"></a>五、微服务设计原则</h2> <h4><a id="51_AKF__116" rel="nofollow"></a>5.1 AKF 拆分原则</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/f5626f0e8c46d93b0e569994e8b925a8.jpg" alt="微服务架构介绍"></p> <ul> <li>X轴：指的是水平复制，就是单体系统多运行几个实例，成为集群加负载均衡的模式</li> <li>Z轴：是基于类似的数据分区，例如互联网打车App 用户激增，集群扛不住，按照用户区域进行数据分区，北京、上海、广州等多建几个集群</li> <li>Y轴：微服务的拆分模式，基于不同的业务进行拆分</li> </ul> <h4><a id="52__124" rel="nofollow"></a>5.2 前后端分离原则</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/5102a13c46180f064ce7899da7fc35db.jpg" alt="微服务架构介绍"></p> <ul> <li>前后端技术分离，可以由各自专家对各自领域进行优化，提升前端用户体验</li> <li>前后端分离模式下，前后端交互页面更清晰，就剩下了接口模型，后端的接口更简洁明了，更容易维护</li> <li>前端多渠道集成场景更容易，后端服务无需变更，采用统一的数据和模型，可支持多个前端，例如：微信H5前端、PC前端、安卓前端、IOS前端</li> </ul> <h4><a id="53__133" rel="nofollow"></a>5.3 无状态服务</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/344cfe5eeab8a908bc688316668a355a.jpg" alt="微服务架构介绍"></p> <h4><a id="54_Restful__138" rel="nofollow"></a>5.4 Restful 通信风格</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/8d0ad226c257d558fda030fe1e2863ed.jpg" alt="微服务架构介绍"></p> <ul> <li>无状态协议HTTP，具有先天优势，扩展能力很强</li> <li>JSON报文序列化，轻量简单，人与机器均可读，学习成本低，搜索引擎友好</li> <li>语言无关，各大热门语言都提供成熟的Restful API 框架，比 RPC 框架生态更完善!</li> <li></li> </ul> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-82638.htm">东门宠物用品批发市场营业时间（东门卖宠物的地址）</a></p>
+                                        <p>下一个：<a href="/news/article-83352.htm">让猫挠了出血过了24小时有事吗会感染吗会传染吗（被猫挠出血了过24小时了）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-53916.htm" title="python中time.strftime不支持中文，报错UnicodeEncodeError: &#8216;locale&#8217; codec can&#8217;t encode character &#8216;\u5e74&#8217; in po&#8230;">python中time.strftime不支持中文，报错UnicodeEncodeError: &#8216;locale&#8217; codec can&#8217;t encode character &#8216;\u5e74&#8217; in po&#8230;</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-free-subscribe-node.htm" title="VPN For Netflix | 2月11日18.9M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN For Netflix | 2月11日18.9M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-node-share.htm" title="VPN For Netflix | 3月1日20.5M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN For Netflix | 3月1日20.5M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-69763.htm" title="兽用疫苗稀释后多久过期啊（兽用疫苗佐剂）">兽用疫苗稀释后多久过期啊（兽用疫苗佐剂）</a></li>
+                        <li class="py-2"><a href="/news/article-73059.htm" title="宠物粮食加工设备有哪些品牌（宠物粮加工机器）">宠物粮食加工设备有哪些品牌（宠物粮加工机器）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-node-share.htm" title="VPN For Netflix | 3月22日18.8M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN For Netflix | 3月22日18.8M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-59931.htm" title="Minikube使用文档">Minikube使用文档</a></li>
+                        <li class="py-2"><a href="/news/article-83352.htm" title="让猫挠了出血过了24小时有事吗会感染吗会传染吗（被猫挠出血了过24小时了）">让猫挠了出血过了24小时有事吗会感染吗会传染吗（被猫挠出血了过24小时了）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-27-free-node-subscribe-links.htm" title="VPN For Netflix | 2月27日21.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN For Netflix | 2月27日21.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-clash-v2ray-ss-ssr.htm" title="VPN For Netflix | 3月6日21.4M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址">VPN For Netflix | 3月6日21.4M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
