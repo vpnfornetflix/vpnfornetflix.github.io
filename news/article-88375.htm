@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-88375.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值</title>
+        <meta name="description" content="在使用CURL通过REST API获取Azure Key Vaualt的Secrets值，提示Missing Token， 问如何来生成正确的Token呢？  # curl 命令 curl-k --r" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-88375.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/abca5d38eac1ed3af4f5eb34dffaa203.webp" />
+        <meta property="og:release_date" content="2025-04-04T09:10:20" />
+    <meta property="og:updated_time" content="2025-04-04T09:10:20" />
+        <meta property="og:description" content="在使用CURL通过REST API获取Azure Key Vaualt的Secrets值，提示Missing Token， 问如何来生成正确的Token呢？  # curl 命令 curl-k --r" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				</h1> <p>在使用CURL通过REST API获取Azure Key Vaualt的Secrets值，提示Missing Token， 问如何来生成正确的Token呢？</p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 0, 0, 1)"># curl 命令 curl</span>-k --request GET -H<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">Content-type: application/json;charset=UTF-8</span><span style="color: rgba(128, 0, 0, 1)">"</span> -s https:<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">&lt;your key vault name&gt;.vault.azure.cn/secrets/&lt;secrets name &gt;/&lt;Secrets version number b38a011e4a82a8830b401af1a2384e72</span><span style="color: rgba(0, 0, 0, 1)"> # 错误消息 {</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">error</span><span style="color: rgba(128, 0, 0, 1)">"</span>:{<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">code</span><span style="color: rgba(128, 0, 0, 1)">"</span>:<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">Unauthorized</span><span style="color: rgba(128, 0, 0, 1)">"</span>,<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">message</span><span style="color: rgba(128, 0, 0, 1)">"</span>:<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">AKV10000: Request is missing a Bearer or PoP token</span></pre> </div> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/1d389a956539b4caef3aab4bd3724896.jpg" alt="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值" width="999" height="419" loading="lazy"/></p> </h1> <p>通过-v 输出的更详细错误显示 401 Unauthorized，在curl发送的请求中缺少了 Authorization Header。而如果通过浏览器F12(开发者工具)获取到访问Key Vault Secret的Netwrok Trace获取的Authorization还是会遇见错误。</p> <p>错误消息为：</p> <div class="cnblogs_code"> <pre>{<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">error</span><span style="color: rgba(128, 0, 0, 1)">"</span>:{<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">code</span><span style="color: rgba(128, 0, 0, 1)">"</span>:<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">Unauthorized</span><span style="color: rgba(128, 0, 0, 1)">"</span>,<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">message</span><span style="color: rgba(128, 0, 0, 1)">"</span>:<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">AKV10022: Invalid audience. Expected https://vault.azure.cn, found: https://management.core.chinacloudapi.cn/.</span><span style="color: rgba(128, 0, 0, 1)">"</span>}}</pre> </div> <p>所以为了获取正确的Token：</p> <h4 style="margin-left: 30px">一：需要在Azure AD中“注册应用”</h4> <h4 style="margin-left: 30px">二：在Azure Key Vault的Access Policy中添加访问授权</h4> <h4 style="margin-left: 30px">三：调用AAD Token 接口获取到正确的Token</h4> </h1> <h2>一：在Azure AD中“注册应用”</h2> <p>进入 Azure AD<span id="_weave_e_5821" class="msportalfx-font-regular">App registrations 页面（</span>https://portal.azure.cn/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps），点击 “New registration”添加新的注册应用，输入名称后注册。</p> <p>成功后，一定要记住一点。复制出<strong> Application(Client) ID, Directory (tenant) ID,</strong>外加 在Certificates &amp; Secrets页面中添加的<strong>Client Secrets.</strong> (将在第三步中使用)</p> <p><strong><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/1d546bbbda820e0918ff5adff4172571.jpg" alt="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值" width="999" height="982" loading="lazy"/></strong></p> <h2>二：在Azure Key Vault的Access Policy中添加访问授权</h2> <ol> <li>进入Azure Key Vault页面</li> <li>选择要操作的Key Value</li> <li>点击 Access Policy</li> <li>赋予Secret Permissions权限</li> </ol> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/af56bc425beaa964cc6c3fc33d430e43.jpg" alt="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值" width="999" height="482" loading="lazy"/></p> <h2>三：调用AAD Token 接口获取到正确的Token</h2> <p>同样，使用CURL命令调用AAD Token API，获取第四步的Authorization Token</p> <p>在Windows中，POST请求的Body内容可以通过 --data “parameter1=value1&amp;parameter2=value2”的格式传递。所以获取Token的CLUR命令为：</p> <div class="cnblogs_code"> <pre>curl -k --request POST -H<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Content-Type: application/x-www-form-urlencoded</span><span style="color: rgba(128, 0, 0, 1)">'</span><br/>--data<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">grant_type=client_credentials&amp;resource=https://vault.azure.cn&amp;client_secret=your secret value&amp;client_id=your aad client id</span><span style="color: rgba(128, 0, 0, 1)">"</span><br/>-s https:<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">login.chinacloudapi.cn/&lt;your tenant id &gt;/oauth2/token</span></pre> </div> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/fe77855bb0dd8a7649a3923428d16697.jpg" alt="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值" width="999" height="226" loading="lazy"/></p> <h2>四：调用Key Vault Secrets接口获取Secret</h2> <p>从第三步中获取Token，放入获取Secrets的Header中。命令为：</p> <div class="cnblogs_code"> <pre>curl -k --request GET -H<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">Content-type: application/json;charset=UTF-8</span><span style="color: rgba(128, 0, 0, 1)">"</span><br/>-H<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)"><span style="background-color: rgba(255, 255, 0, 1)">Authorization:Bearer</span> &lt;REPLACE CONTENT ey*********************&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span><br/>-s  https:<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">&lt;your key vault name&gt;.vault.azure.cn/secrets/&lt;secrets name &gt;/&lt;Secrets version number b38a011e4a82a8830b401af1a2384e72?<span style="background-color: rgba(255, 255, 0, 1)">api-version=7.3</span></span></pre> </div> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/7a21e9ce74a677ca3c59e54640563930.jpg" alt="【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值" width="999" height="138" loading="lazy"/></p> <h2>附录一：curl命令的参数设定</h2> <div class="cnblogs_code"> <pre>C:\&gt;curl -<span style="color: rgba(0, 0, 0, 1)">h Usage: curl [options...]</span>&lt;url&gt;  -d, --data &lt;data&gt;<span style="color: rgba(0, 0, 0, 1)">   HTTP POST data</span>-f, --<span style="color: rgba(0, 0, 0, 1)">fail          Fail silently (no output at all) on HTTP errors</span>-h, --help &lt;category&gt;  Get help<span style="color: rgba(0, 0, 255, 1)">for</span><span style="color: rgba(0, 0, 0, 1)"> commands</span>-i, --include       Include protocol response headers<span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> the output</span>-o, --output &lt;<span style="color: rgba(0, 0, 255, 1)">file</span>&gt;  Write to<span style="color: rgba(0, 0, 255, 1)">file</span><span style="color: rgba(0, 0, 0, 1)"> instead of stdout</span>-O, --remote-name   Write output to a<span style="color: rgba(0, 0, 255, 1)">file</span> named as the remote<span style="color: rgba(0, 0, 255, 1)">file</span>  -s, --<span style="color: rgba(0, 0, 0, 1)">silent        Silent mode</span>-T, --upload-<span style="color: rgba(0, 0, 255, 1)">file</span> &lt;<span style="color: rgba(0, 0, 255, 1)">file</span>&gt;<span style="color: rgba(0, 0, 0, 1)">  Transfer local FILE to destination</span>-u, --user &lt;user:password&gt;<span style="color: rgba(0, 0, 0, 1)">  Server user and password</span>-A, --user-agent &lt;name&gt;  Send User-Agent &lt;name&gt;<span style="color: rgba(0, 0, 0, 1)"> to server</span>-v, --verbose       Make the operation<span style="color: rgba(0, 0, 255, 1)">more</span><span style="color: rgba(0, 0, 0, 1)"> talkative</span>-V, --<span style="color: rgba(0, 0, 0, 1)">version       Show version number and quit  This is not the full help, this menu is stripped into categories. Use</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">--help category</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> to get an overview of all categories. For all options use the manual or</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">--help all</span><span style="color: rgba(128, 0, 0, 1)">"</span>.</pre> </div> <h3>参考文档</h3> <p><strong>Azure Key Vault REST API - Get Secret:</strong><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://docs.microsoft.com/zh-cn/rest/api/keyvault/secrets/get-secret/get-secret"  target="_blank" rel="nofollow">https://docs.microsoft.com/zh-cn/rest/api/keyvault/secrets/get-secret/get-secret</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-87642.htm">flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应</a></p>
+                                        <p>下一个：<a href="/news/article-88376.htm">想开宠物店怎么入行赚钱快（想开宠物店怎么找货源）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-73059.htm" title="宠物粮食加工设备有哪些品牌（宠物粮加工机器）">宠物粮食加工设备有哪些品牌（宠物粮加工机器）</a></li>
+                        <li class="py-2"><a href="/news/article-71067.htm" title="哈尔滨王海龙个人信息（哈尔滨王海涛）">哈尔滨王海龙个人信息（哈尔滨王海涛）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-node-subscribe.htm" title="VPN For Netflix | 3月25日19.8M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址">VPN For Netflix | 3月25日19.8M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-29-free-high-speed-nodes.htm" title="VPN For Netflix | 3月29日19.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN For Netflix | 3月29日19.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-84052.htm" title="办宠物食品加工厂需要投资多少钱（宠物食品加工厂需要办理哪些手续）">办宠物食品加工厂需要投资多少钱（宠物食品加工厂需要办理哪些手续）</a></li>
+                        <li class="py-2"><a href="/news/article-73727.htm" title="为什么猫不会打小孩（凭什么猫不能打）">为什么猫不会打小孩（凭什么猫不能打）</a></li>
+                        <li class="py-2"><a href="/news/article-68448.htm" title="狗粮平价品牌（狗粮平价品牌有哪些）">狗粮平价品牌（狗粮平价品牌有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-72392.htm" title="快速入门kotlin-标准函数与静态方法">快速入门kotlin-标准函数与静态方法</a></li>
+                        <li class="py-2"><a href="/news/article-74397.htm" title="全国排名前十的兽药厂 全国排名前十的兽药厂家有哪些">全国排名前十的兽药厂 全国排名前十的兽药厂家有哪些</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-clash-v2ray-ss-ssr.htm" title="VPN For Netflix | 3月16日22.2M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址">VPN For Netflix | 3月16日22.2M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

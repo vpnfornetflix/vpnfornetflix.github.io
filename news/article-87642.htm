@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-87642.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应</title>
+        <meta name="description" content="一.需求 不同大小的屏幕进入页面，都是一排5个div盒子，且div盒子宽度随屏幕自适应 二.效果 三.代码和注释如下 &lt;el-rowclass="indexListBoxRow"&gt;&lt;" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-87642.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/82ea6c5b5418ca38e0096b643a741c9f.webp" />
+        <meta property="og:release_date" content="2025-04-03T08:33:35" />
+    <meta property="og:updated_time" content="2025-04-03T08:33:35" />
+        <meta property="og:description" content="一.需求 不同大小的屏幕进入页面，都是一排5个div盒子，且div盒子宽度随屏幕自适应 二.效果 三.代码和注释如下 &lt;el-rowclass="indexListBoxRow"&gt;&lt;" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>一.需求<br /> 不同大小的屏幕进入页面，都是一排5个div盒子，且div盒子宽度随屏幕自适应</p> <p>二.效果<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/e7f8558539c8bb87bd573e5621c816ae.jpg" alt="flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应"><br /> 三.代码和注释如下</p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>el<span class="token operator">-</span>row<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"indexListBoxRow"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>el<span class="token operator">-</span>col<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"indexList_box"</span>         v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item,index) in indexList"</span><span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">"item.id"</span><span class="token comment">//循环展示div盒子</span><span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{ lastLine: (index + 1) % 5 == 0 }"</span><span class="token comment">//若div盒子下标+1跟5取余为0，则代表这是最后一列，即第5列，则展示lastLine这个类名下的样式</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token comment">//每个div盒子里的内容，内容撑出div盒子高度</span><span class="token operator">&lt;</span>div<span class="token operator">:</span>title<span class="token operator">=</span><span class="token string">"item.name"</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>item<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span>div<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"description"</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>item<span class="token punctuation">.</span>value<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span>i<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"el-icon-arrow-right"</span> @click<span class="token operator">=</span><span class="token string">"detailClick(item.metricsId)"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span>div<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"date"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"el-icon-refresh-right"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>item<span class="token punctuation">.</span>flushTime<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>col<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>row<span class="token operator">&gt;</span></code></pre> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"less"</span> scoped<span class="token operator">&gt;</span><span class="token punctuation">.</span>indexListBoxRow<span class="token punctuation">{<!-- --></span>     margin<span class="token operator">-</span>top<span class="token operator">:</span> 41px<span class="token punctuation">;</span><span class="token literal-property property">display</span><span class="token operator">:</span> flex<span class="token punctuation">;</span><span class="token comment">//flex布局</span>     flex<span class="token operator">-</span>wrap<span class="token operator">:</span> wrap<span class="token punctuation">;</span><span class="token comment">//可换行</span><span class="token punctuation">}</span><span class="token punctuation">.</span>indexList_box<span class="token punctuation">{<!-- --></span>     border<span class="token operator">-</span>radius<span class="token operator">:</span> 8px<span class="token punctuation">;</span>     margin<span class="token operator">-</span>bottom<span class="token operator">:</span> 16px<span class="token punctuation">;</span><span class="token comment">//每个div盒子下边距为16px</span>     margin<span class="token operator">-</span>right<span class="token operator">:</span> 40px<span class="token punctuation">;</span><span class="token comment">//每个div盒子之间的右边距为40px</span>     background<span class="token operator">-</span>color<span class="token operator">:</span> #fff<span class="token punctuation">;</span><span class="token literal-property property">width</span><span class="token operator">:</span><span class="token function">calc</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span><span class="token operator">-</span> 160px<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//每个div盒子的宽度=（百分百的屏幕宽度-4个40px的右间距）/5个div盒子</span><span class="token punctuation">}</span><span class="token punctuation">.</span>lastLine<span class="token punctuation">{<!-- --></span>     margin<span class="token operator">-</span>right<span class="token operator">:</span><span class="token number">0</span><span class="token operator">!</span>important<span class="token punctuation">;</span><span class="token comment">//每行第5个，即最后一列的div盒子的右边距设为0px</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-87641.htm">JDK8新特性Optional工具类</a></p>
+                                        <p>下一个：<a href="/news/article-88375.htm">【Azure Developer】使用 CURL 获取 Key Vault 中 Secrets 中的值</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-node-share.htm" title="VPN For Netflix | 3月22日18.8M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN For Netflix | 3月22日18.8M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-71065.htm" title="基于Ansible实现Apache Doris快速部署运维指南">基于Ansible实现Apache Doris快速部署运维指南</a></li>
+                        <li class="py-2"><a href="/news/article-72392.htm" title="快速入门kotlin-标准函数与静态方法">快速入门kotlin-标准函数与静态方法</a></li>
+                        <li class="py-2"><a href="/news/article-78480.htm" title="FreeRTOS实时操作系统信号量基础_操作系统">FreeRTOS实时操作系统信号量基础_操作系统</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-high-speed-nodes.htm" title="VPN For Netflix | 3月18日18.9M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址">VPN For Netflix | 3月18日18.9M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-72393.htm" title="广州宠物医院领养 广州宠物医院领养猫">广州宠物医院领养 广州宠物医院领养猫</a></li>
+                        <li class="py-2"><a href="/news/article-89106.htm" title="2021公务员国考报考条件及时间（2021公务员国考报考条件及时间表）">2021公务员国考报考条件及时间（2021公务员国考报考条件及时间表）</a></li>
+                        <li class="py-2"><a href="/news/article-70431.htm" title="vue项目中安装sass方法">vue项目中安装sass方法</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-19-free-node-subscribe.htm" title="VPN For Netflix | 3月19日19.8M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址">VPN For Netflix | 3月19日19.8M/S|免费VPN/V2ray/Shadowrocket/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-87641.htm" title="JDK8新特性Optional工具类">JDK8新特性Optional工具类</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
