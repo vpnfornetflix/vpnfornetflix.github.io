@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnfornetflix.github.io/news/article-100233.htm" />
+    <meta name="theme-color" content="#c70039">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyTorch查看CUDA支持情况</title>
+        <meta name="description" content="import torch import torchvision print(torch.cuda.is_available())  上面的命令只是检测CUDA是否安装正确并能被Pytorch检测到，并" />
+        <link rel="icon" href="/assets/website/img/clashxpro/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN For Netflix 订阅链接节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnfornetflix.github.io/news/article-100233.htm" />
+    <meta property="og:site_name" content="VPN For Netflix 订阅链接节点官网" />
+    <meta property="og:title" content="PyTorch查看CUDA支持情况" />
+    <meta property="og:image" content="https://vpnfornetflix.github.io/uploads/20241107-1/5e656f8f5b721c50b12e12708d6e3670.webp" />
+        <meta property="og:release_date" content="2025-04-20T09:04:08" />
+    <meta property="og:updated_time" content="2025-04-20T09:04:08" />
+        <meta property="og:description" content="import torch import torchvision print(torch.cuda.is_available())  上面的命令只是检测CUDA是否安装正确并能被Pytorch检测到，并" />
+        
+    <!-- Start Stylesheet -->
+    <link href="/assets/website/css/clashxpro/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/flaticon-set.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/animate.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/bootsnav.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashxpro/style.css" rel="stylesheet">
+    <link href="/assets/website/css/clashxpro/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PyTorch查看CUDA支持情况">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE8EJMMK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FE8EJMMK0B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="/">
+                                                <span>VPN For Netflix</span>
+                                            </a>
+                </div>
+                <!-- End Header Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                                                <li><a href="/">首页</a></li>
+                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                <li><a href="/news/">新闻资讯</a></li>
+                                                <li><a href="/client.htm">客户端</a></li>
+                                            </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Page Heading -->
+    <div class="utf-page-heading shadow dark bg-fixed text-light" style="background-image: url(assets/img/banner/breadcrum.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>PyTorch查看CUDA支持情况</h1>
+                    <div class="utf-breadcrumb-items">
+                        <ul class="breadcrumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li class="active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Heading -->
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="utf-portfolio-area-item default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <pre><code class="prism language-python"><span class="token keyword">import</span> torch <span class="token keyword">import</span> torchvision <span class="token keyword">print</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <p>上面的命令只是检测CUDA是否安装正确并能被Pytorch检测到，并没有说明是否能正常使用，要想看Pytorch能不能调用cuda加速，还需要简单的测试一下：</p> <pre><code class="prism language-python">a <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> a <span class="token operator">=</span> a<span class="token punctuation">.</span>cuda<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> </code></pre> <blockquote> <p><strong>Cuda runtime error (48) : no kernel image is available for execution</strong></p> <p><strong>处理办法：</strong><br /> 一般来讲，CUDA的48号错误，是在于硬件的支持情况。对于算力3.0的显卡来说，如果安装了9.0的CUDA就会出现这个问题，解决的办法是退回CUDA8.0，或者更换更加高端的显卡，或者直接从源码编译，并在源码中做相应设置（修改setup.py文件里的TORCH_CUDA_ARCH_LIST，将这个值改成你当前使用的GPU对应算力！）</p> </blockquote></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-99483.htm">宠物美容好学吗学多久才会（宠物美容好学吗学多久才会学）</a></p>
+                                        <p>下一个：<a href="/news/article-100234.htm">动物疫苗行业排名前十（动物疫苗行业排名前十名）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-node-subscribe-links.htm" title="VPN For Netflix | 4月13日20.8M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址">VPN For Netflix | 4月13日20.8M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-92055.htm" title="成人考兽医资格证需要什么条件（成人怎么报考兽医专业）">成人考兽医资格证需要什么条件（成人怎么报考兽医专业）</a></li>
+                        <li class="py-2"><a href="/news/article-81917.htm" title="动物疫苗市场销售工作布署会议（动物疫苗销售大客户经理）">动物疫苗市场销售工作布署会议（动物疫苗销售大客户经理）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-free-node-subscribe.htm" title="VPN For Netflix | 3月24日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN For Netflix | 3月24日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-95795.htm" title="十大品牌狗粮排名前十名有哪些（知名狗粮品牌）">十大品牌狗粮排名前十名有哪些（知名狗粮品牌）</a></li>
+                        <li class="py-2"><a href="/news/article-102416.htm" title="农大动物医院电话号码是多少（农大动物医院急诊电话）">农大动物医院电话号码是多少（农大动物医院急诊电话）</a></li>
+                        <li class="py-2"><a href="/news/article-81918.htm" title="省内寄猫咪一般多少钱（省内邮寄猫咪多少钱）">省内寄猫咪一般多少钱（省内邮寄猫咪多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-76431.htm" title="C++入门   面向对象的基础">C++入门   面向对象的基础</a></li>
+                        <li class="py-2"><a href="/news/article-87642.htm" title="flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应">flex布局之5个div盒子一排，不同屏幕，盒子宽度自适应</a></li>
+                        <li class="py-2"><a href="/news/article-99477.htm" title="宠物粮生产设备多少钱一套 宠物粮生产设备多少钱一套啊">宠物粮生产设备多少钱一套 宠物粮生产设备多少钱一套啊</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">68</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+        <!-- Start Footer -->
+    <footer class="text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 copyright text-left">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN For Netflix 订阅链接节点官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-md-4 utf-footer-social text-right">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery Style -->
+    <script src="/assets/website/js/frontend/clashxpro/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/equal-height.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.appear.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/count-to.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/bootsnav.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/typed.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/YTPlayer.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxpro/custom_script.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
