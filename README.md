@@ -1,4 +1,4 @@
-# VPN For Netflix | 3月23日22.8M/S|免费VPN/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址  更新时间 2026-03-23 10:34:08
+# VPN For Netflix | 3月31日18.9M/S|免费VPN/Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点免费节点链接地址  更新时间 2026-03-31 10:41:42
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpnfornetflix.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://vpnfornetflix.github.io/uploads/2026/03/0-20260323.yaml
-- https://vpnfornetflix.github.io/uploads/2026/03/1-20260323.yaml
-- https://vpnfornetflix.github.io/uploads/2026/03/2-20260323.yaml
-- https://vpnfornetflix.github.io/uploads/2026/03/3-20260323.yaml
-- https://vpnfornetflix.github.io/uploads/2026/03/4-20260323.yaml
+- https://vpnfornetflix.github.io/uploads/2026/03/0-20260331.yaml
+- https://vpnfornetflix.github.io/uploads/2026/03/1-20260331.yaml
+- https://vpnfornetflix.github.io/uploads/2026/03/2-20260331.yaml
+- https://vpnfornetflix.github.io/uploads/2026/03/3-20260331.yaml
+- https://vpnfornetflix.github.io/uploads/2026/03/4-20260331.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://vpnfornetflix.github.io/uploads/2026/03/0-20260323.txt
-- https://vpnfornetflix.github.io/uploads/2026/03/1-20260323.txt
-- https://vpnfornetflix.github.io/uploads/2026/03/2-20260323.txt
-- https://vpnfornetflix.github.io/uploads/2026/03/3-20260323.txt
-- https://vpnfornetflix.github.io/uploads/2026/03/4-20260323.txt
+- https://vpnfornetflix.github.io/uploads/2026/03/0-20260331.txt
+- https://vpnfornetflix.github.io/uploads/2026/03/1-20260331.txt
+- https://vpnfornetflix.github.io/uploads/2026/03/2-20260331.txt
+- https://vpnfornetflix.github.io/uploads/2026/03/3-20260331.txt
+- https://vpnfornetflix.github.io/uploads/2026/03/4-20260331.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://vpnfornetflix.github.io/uploads/2026/03/20260323.json
+- https://vpnfornetflix.github.io/uploads/2026/03/20260331.json
 
 ## 更多Clash节点订阅 ：
 
