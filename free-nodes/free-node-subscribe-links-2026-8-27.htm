@@ -291,34 +291,14 @@ Quantumult红交叉支持同时管理多个VPN账户。用户可以轻松切换�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何优化 Clash 的 DNS 设置？</h5></div>
-    <div class="panel-body">
-        在 Clash 中使用自定义 DNS 可以加快域名解析速度。建议使用 doh（DNS over HTTPS）或 dot（DNS over TLS）配置方式，既能提升速度，也能保护隐私防止 DNS 泄露。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 如何管理不同协议节点？</h5></div>
     <div class="panel-body">
         Nekobox 可以同时管理 Shadowsocks、VMess、Trojan 等多种协议节点。结合策略组和分流规则，可实现不同流量走不同节点，提升网络效率和管理便利性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何设置？</h5></div>
     <div class="panel-body">
-        根据网络封锁情况选择合适协议和混淆组合，例如 tls1.2_ticket_auth 模拟 HTTPS 流量。选择最佳组合可提高抗封锁能力和稳定性，保证节点长期可用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的证书配置需要注意哪些事项？</h5></div>
-    <div class="panel-body">
-        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。推荐使用受信任证书，并确保证书链完整，以保证节点安全和长期可用性，同时提升伪装效果。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名如何正确配置？</h5></div>
-    <div class="panel-body">
-        伪装域名必须真实可访问且证书有效，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否比 Clash 更省资源？</h5></div>
-    <div class="panel-body">
-        Sing-box 在性能优化上比 Clash 更出色。它采用 Go 语言重构核心模块，并对并发模型进行了优化，内存占用更低，启动速度更快，适合低配置设备或嵌入式环境。<hr />    </div>
+        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 是否可以导入多个节点？</h5></div>
@@ -326,19 +306,39 @@ Quantumult红交叉支持同时管理多个VPN账户。用户可以轻松切换�
         支持。用户可手动输入或扫描二维码导入多个节点，并可修改或删除节点信息。虽然不支持自动订阅更新，但足以满足轻量用户对节点管理和分流需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么优势？</h5></div>
-    <div class="panel-body">
-        分组管理可按延迟、地区或用途分类节点，并结合策略组实现自动分流。用户可快速选择最优节点，提高访问速度和稳定性，方便管理大量节点并优化维护效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
     <div class="panel-body">
         支持。Nekobox 可以独立管理 Shadowsocks、Clash 等客户端节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高节点管理效率和使用便利性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何设置？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 是否比 Clash 更省资源？</h5></div>
     <div class="panel-body">
-        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。    </div>
+        Sing-box 在性能优化上比 Clash 更出色。它采用 Go 语言重构核心模块，并对并发模型进行了优化，内存占用更低，启动速度更快，适合低配置设备或嵌入式环境。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的伪装域名如何正确配置？</h5></div>
+    <div class="panel-body">
+        伪装域名必须真实可访问且证书有效，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择？</h5></div>
+    <div class="panel-body">
+        根据网络封锁情况选择合适协议和混淆组合，例如 tls1.2_ticket_auth 模拟 HTTPS 流量。选择最佳组合可提高抗封锁能力和稳定性，保证节点长期可用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何优化 Clash 的 DNS 设置？</h5></div>
+    <div class="panel-body">
+        在 Clash 中使用自定义 DNS 可以加快域名解析速度。建议使用 doh（DNS over HTTPS）或 dot（DNS over TLS）配置方式，既能提升速度，也能保护隐私防止 DNS 泄露。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么优势？</h5></div>
+    <div class="panel-body">
+        分组管理可按延迟、地区或用途分类节点，并结合策略组实现自动分流。用户可快速选择最优节点，提高访问速度和稳定性，方便管理大量节点并优化维护效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的证书配置需要注意哪些事项？</h5></div>
+    <div class="panel-body">
+        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。推荐使用受信任证书，并确保证书链完整，以保证节点安全和长期可用性，同时提升伪装效果。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -386,16 +386,16 @@ Quantumult红交叉支持同时管理多个VPN账户。用户可以轻松切换�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-node-share.htm" title="VPN For Netflix | 8月8日21.7M/S|免费VPN/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点免费节点链接地址">VPN For Netflix | 8月8日21.7M/S|免费VPN/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-8-13.htm" title="VPN For Netflix | 8月13日20.9M/S|免费VPN/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点免费节点链接地址">VPN For Netflix | 8月13日20.9M/S|免费VPN/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-2-vpn-node.htm" title="VPN For Netflix | 8月2日23M/S|免费VPN/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Trojan节点免费节点链接地址">VPN For Netflix | 8月2日23M/S|免费VPN/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-8-11.htm" title="VPN For Netflix | 8月11日21.3M/S|免费VPN/V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/Trojan节点免费节点链接地址">VPN For Netflix | 8月11日21.3M/S|免费VPN/V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-7.htm" title="VPN For Netflix | 8月7日21.5M/S|免费VPN/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点免费节点链接地址">VPN For Netflix | 8月7日21.5M/S|免费VPN/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-29.htm" title="VPN For Netflix | 8月29日22.8M/S|免费VPN/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点链接地址">VPN For Netflix | 8月29日22.8M/S|免费VPN/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-28-top-vpn-node.htm" title="VPN For Netflix | 7月28日20.6M/S|免费VPN/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/Clash节点免费节点链接地址">VPN For Netflix | 7月28日20.6M/S|免费VPN/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-7-31.htm" title="VPN For Netflix | 7月31日18M/S|免费VPN/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN For Netflix | 7月31日18M/S|免费VPN/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-free-node-subscribe.htm" title="VPN For Netflix | 7月22日22.4M/S|免费VPN/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点免费节点链接地址">VPN For Netflix | 7月22日22.4M/S|免费VPN/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-26-top-vpn-node.htm" title="VPN For Netflix | 7月26日21.9M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点免费节点链接地址">VPN For Netflix | 7月26日21.9M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-vpn-node.htm" title="VPN For Netflix | 8月22日18.1M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点链接地址">VPN For Netflix | 8月22日18.1M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-23.htm" title="VPN For Netflix | 8月23日21.6M/S|免费VPN/Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN For Netflix | 8月23日21.6M/S|免费VPN/Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-node-share.htm" title="VPN For Netflix | 9月4日19.4M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点免费节点链接地址">VPN For Netflix | 9月4日19.4M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-15.htm" title="VPN For Netflix | 8月15日22M/S|免费VPN/SSR节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN For Netflix | 8月15日22M/S|免费VPN/SSR节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-25.htm" title="VPN For Netflix | 8月25日20M/S|免费VPN/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点免费节点链接地址">VPN For Netflix | 8月25日20M/S|免费VPN/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-free-node-subscribe.htm" title="VPN For Netflix | 8月12日18.4M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点免费节点链接地址">VPN For Netflix | 8月12日18.4M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-17.htm" title="VPN For Netflix | 8月17日18.2M/S|免费VPN/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点/V2ray节点免费节点链接地址">VPN For Netflix | 8月17日18.2M/S|免费VPN/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-vpn-free.htm" title="VPN For Netflix | 8月24日20.2M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点免费节点链接地址">VPN For Netflix | 8月24日20.2M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-free-vpn-node.htm" title="VPN For Netflix | 8月6日18M/S|免费VPN/Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN For Netflix | 8月6日18M/S|免费VPN/Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -407,10 +407,10 @@ Quantumult红交叉支持同时管理多个VPN账户。用户可以轻松切换�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
